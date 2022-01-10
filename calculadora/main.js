@@ -1,0 +1,63 @@
+const calc = require("./calculator");
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+const ligarCalculadora = async () => {
+  let calcLigada = true;
+  console.log("\u001b[36m" + "Calculadora LIGADA!" + "\u001b[0m");
+  console.log(
+    "\u001b[32m" +
+      `Suporta operações de:\nsoma: "soma"\nsubtração: "sub"\nmultiplicação: "mult"\ndivisão: "div"\npotenciação: "power"` +
+      "\u001b[0m"
+  );
+
+  while (calcLigada) {
+    let valor1, valor2, operation;
+    await new Promise((resolve) =>
+      rl.question("Insira o 1º valor: ", (valorLido) =>
+        resolve((valor1 = valorLido))
+      )
+    );
+    if (!valor1 | isNaN(valor1)) {// Reinicia calculadora se valor1 for inválido
+      console.log("Valor1 inválido");
+      ligarCalculadora();
+    }
+    await new Promise((resolve) =>
+      rl.question("Insira o 2º valor: ", (valorLido) =>
+        resolve((valor2 = valorLido))
+      )
+    );
+
+    if (!valor2 | isNaN(valor2)) {// Reinicia calculadora se valor2 for inválido
+      console.log("Valor2 inválido");
+      ligarCalculadora();
+    }
+    await new Promise((resolve) =>
+      rl.question("Insira a operação desejada: ", (valorLido) =>
+        resolve((operation = valorLido))
+      )
+    );
+    valor1 = Number(valor1);
+    valor2 = Number(valor2);
+    operation = operation.toLowerCase();
+    console.log(calc.operations(valor1, valor2, operation));
+
+    await new Promise((resolve) =>
+      rl.question("Deseja fazer mais cálculos? ", (valorLido) => {
+        valorLido = valorLido.toLowerCase();
+        if ((valorLido === "n") | (valorLido === "no") | (valorLido === "não")) {
+          console.log("\u001b[31m" + "Calculadora DESLIGADA." + "\u001b[0m");
+          process.exit();
+        } else {
+          ligarCalculadora();
+        }
+      })
+    );
+  }
+};
+
+ligarCalculadora();
