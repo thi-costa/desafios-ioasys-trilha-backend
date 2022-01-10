@@ -16,4 +16,6 @@ A calculadora feita suporta as operações de:
 * potenciação (com uso do sinal "**")
 
 A imagem abaixo mostram o funcionamento da calculadora.
+
+
 ![CalculatorJsConsole](https://user-images.githubusercontent.com/41833533/148815627-f1e1f817-ea96-486a-bcc9-f23499a567de.png)
