@@ -4,10 +4,14 @@ const operations = (val1, val2, operation) => {
       return val1 + val2;
     case "-":
       return val1 - val2;
-    case "/":
-      return val1 / val2;
     case "*":
       return val1 * val2;
+    case "/":
+      return val1 / val2;
+    case "//":
+      return Math.floor(val1 / val2);
+    case "%":
+      return val1 % val2;
     case "**":
       return val1 ** val2;
     default:
@@ -21,10 +25,12 @@ const stringCalcLiga = `\u001b[36mCalculadora LIGADA!\u001b[0m
     subtração: "-"
     multiplicação: "*"
     divisão: "/"
+    divisão inteira: "//"
+    resto da divisão: "%"
     potenciação: "**"
   \u001b[0m`;
 
-  const stringCalcDesliga = `\u001b[31mCalculadora DESLIGADA.\u001b[0m`;
+const stringCalcDesliga = `\u001b[31mCalculadora DESLIGADA.\u001b[0m`;
 
 exports.operations = operations;
 exports.stringCalcLiga = stringCalcLiga;
