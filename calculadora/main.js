@@ -8,12 +8,7 @@ const rl = readline.createInterface({
 
 const ligarCalculadora = async () => {
   let calcLigada = true;
-  console.log("\u001b[36m" + "Calculadora LIGADA!" + "\u001b[0m");
-  console.log(
-    "\u001b[32m" +
-      `Suporta operações de:\nsoma: "soma"\nsubtração: "sub"\nmultiplicação: "mult"\ndivisão: "div"\npotenciação: "power"` +
-      "\u001b[0m"
-  );
+  console.log(calc.stringCalcLiga);
 
   while (calcLigada) {
     let valor1, valor2, operation;
@@ -50,7 +45,7 @@ const ligarCalculadora = async () => {
       rl.question("Deseja fazer mais cálculos? ", (valorLido) => {
         valorLido = valorLido.toLowerCase();
         if ((valorLido === "n") | (valorLido === "no") | (valorLido === "não")) {
-          console.log("\u001b[31m" + "Calculadora DESLIGADA." + "\u001b[0m");
+          console.log(calc.stringCalcDesliga);
           process.exit();
         } else {
           ligarCalculadora();
