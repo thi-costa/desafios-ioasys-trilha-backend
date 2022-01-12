@@ -39,7 +39,7 @@ const ligarCalculadora = async () => {
     valor1 = Number(valor1);
     valor2 = Number(valor2);
     operation = operation.toLowerCase();
-    console.log(calc.operations(valor1, valor2, operation));
+    console.log(calc.operations[operation](valor1, valor2));
 
     await new Promise((resolve) =>
       rl.question("Deseja fazer mais cálculos? ", (valorLido) => {

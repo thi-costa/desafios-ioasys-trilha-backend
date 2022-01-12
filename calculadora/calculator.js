@@ -1,23 +1,13 @@
-const operations = (val1, val2, operation) => {
-  switch (operation) {
-    case "+":
-      return val1 + val2;
-    case "-":
-      return val1 - val2;
-    case "*":
-      return val1 * val2;
-    case "/":
-      return val1 / val2;
-    case "//":
-      return Math.floor(val1 / val2);
-    case "%":
-      return val1 % val2;
-    case "**":
-      return val1 ** val2;
-    default:
-      return "Operação inválida";
-  }
-};
+const operations = {
+  '+': (val1, val2) => val1 + val2,
+  '-': (val1, val2) => val1 - val2,
+  '*': (val1, val2) => val1 * val2,
+  '/': (val1, val2) => val1 / val2,
+  '//': (val1, val2) => Math.floor(val1 / val2),
+  '%': (val1, val2) => val1 % val2,
+  '**': (val1, val2) => val1 ** val2
+}
+
 const stringCalcLiga = `\u001b[36mCalculadora LIGADA!\u001b[0m
   \u001b[32m
     Suporta operações de:\n
