@@ -21,9 +21,12 @@ Este repositório foi criado para compartilhar a solução dos desafios desenvol
             <li>divisão (com uso do sinal "/")</li>
             <li>divisão inteira (com uso do sinal "//")</li>
             <li>resto da divisão (com uso do sinal "%")</li>
-            <li>potenciação (com uso do sinal "\*\*")</li>
+            <li>potenciação (com uso do sinal "**")</li>
+            <li>seno, cálculo do seno unidade em radianos (com uso  da string "sin")</li>
+            <li>cosseno, cálculo do cosseno unidade em radianos (com uso da string "cos")</li>
+            <li>tangente, cálculo da tangente unidade em radianos (com uso da string "tan")</li>
         </ul>
         A imagem abaixo mostram o funcionamento da calculadora.</br></br>
-        <img src="https://user-images.githubusercontent.com/41833533/148815627-f1e1f817-ea96-486a-bcc9-f23499a567de.png" alt="MDN logo"/>
+        <img src="https://user-images.githubusercontent.com/41833533/149344072-51dec583-ce83-420a-abc2-fb32ba8edb1a.png" alt="MDN logo"/>
     </div>
 </details>
