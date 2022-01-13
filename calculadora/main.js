@@ -21,26 +21,30 @@ const ligarCalculadora = async () => {
       console.log("Valor1 inválido");
       ligarCalculadora();
     }
-    await new Promise((resolve) =>
-      rl.question("Insira o 2º valor: ", (valorLido) =>
-        resolve((valor2 = valorLido))
-      )
-    );
-
-    if (!valor2 | isNaN(valor2)) {// Reinicia calculadora se valor2 for inválido
-      console.log("Valor2 inválido");
-      ligarCalculadora();
-    }
+    valor1 = Number(valor1);
     await new Promise((resolve) =>
       rl.question("Insira a operação desejada: ", (valorLido) =>
         resolve((operation = valorLido))
       )
     );
-    valor1 = Number(valor1);
-    valor2 = Number(valor2);
     operation = operation.toLowerCase();
-    console.log(calc.operations[operation](valor1, valor2));
-
+    if(!calc.singleOperators.includes(operation)){// verifica se a operação exige 2 valores
+      await new Promise((resolve) =>
+        rl.question("Insira o 2º valor: ", (valorLido) =>
+          resolve((valor2 = valorLido))
+        )
+      );
+  
+      if (!valor2 | isNaN(valor2)) {// Reinicia calculadora se valor2 for inválido
+        console.log("Valor2 inválido");
+        ligarCalculadora();
+      }
+      valor2 = Number(valor2);
+      console.log(calc.operations[operation](valor1, valor2));
+    } else {
+      console.log(calc.operations[operation](valor1));
+    }   
+    
     await new Promise((resolve) =>
       rl.question("Deseja fazer mais cálculos? ", (valorLido) => {
         valorLido = valorLido.toLowerCase();
