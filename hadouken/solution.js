@@ -34,7 +34,7 @@ const funcaoCadastro = (
 ) => {
     mapBD.set(gen.next().value, {
         nome: nome.toLowerCase(),
-        idade: idade,
+        idade: Number(idade),
         nacionalidade: nacionalidade.toLowerCase(),
         estado: estado.toLowerCase(),
         cidade: cidade.toLowerCase(),
@@ -80,17 +80,20 @@ const checarUsuarioExiste = async () => {
     JSON.stringify(usuariosBD.get(0)) === JSON.stringify(infoUsuario)
         ? console.log("\nO usuário está cadastrado no BD.\n")
         : console.log("\nO usuário NÃO está cadastrado no BD.\n");
-    
-    await new Promise(resolve =>{
-        formInterface.question("Deseja fazer outra consulta?('sim' ou 'não')", retorno => {
-            resolve(
-                (retorno.toLowerCase() === "sim") | (retorno.toLowerCase() === "s")
-                ? funcaoCadastro
-                : formInterface.close()
-            );
-        })
-    })
+
+    await new Promise((resolve) => {
+        formInterface.question(
+            "Deseja fazer outra consulta('sim' ou 's')?",
+            (retorno) => {
+                resolve(
+                    (retorno.toLowerCase() === "sim") |
+                        (retorno.toLowerCase() === "s")
+                        ? checarUsuarioExiste()
+                        : formInterface.close()
+                );
+            }
+        );
+    });
 };
 
 checarUsuarioExiste();
-
