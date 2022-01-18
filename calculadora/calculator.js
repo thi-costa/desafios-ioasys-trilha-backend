@@ -1,16 +1,16 @@
 const operations = {
-  '+': (val1, val2) => val1 + val2,
-  '-': (val1, val2) => val1 - val2,
-  '*': (val1, val2) => val1 * val2,
-  '/': (val1, val2) => val1 / val2,
-  '//': (val1, val2) => Math.floor(val1 / val2),
-  '%': (val1, val2) => val1 % val2,
-  '**': (val1, val2) => val1 ** val2,
-  'sin': (val1) => Math.sin(val1),
-  'cos': (val1) => Math.cos(val1),
-  'tan': (val1) => Math.tan(val1)
-}
-const singleOperators = ['sin', 'cos', 'tan']
+  "+": (val1, val2) => val1 + val2,
+  "-": (val1, val2) => val1 - val2,
+  "*": (val1, val2) => val1 * val2,
+  "/": (val1, val2) => val1 / val2,
+  "//": (val1, val2) => Math.floor(val1 / val2),
+  "%": (val1, val2) => val1 % val2,
+  "**": (val1, val2) => val1 ** val2,
+  sin: (val1) => Math.sin(val1),
+  cos: (val1) => Math.cos(val1),
+  tan: (val1) => Math.tan(val1),
+};
+const singleOperators = ["sin", "cos", "tan"];
 
 const stringCalcLiga = `\u001b[36mCalculadora LIGADA!\u001b[0m
   \u001b[32m
@@ -29,7 +29,9 @@ const stringCalcLiga = `\u001b[36mCalculadora LIGADA!\u001b[0m
 
 const stringCalcDesliga = `\u001b[31mCalculadora DESLIGADA.\u001b[0m`;
 
-exports.operations = operations;
-exports.stringCalcLiga = stringCalcLiga;
-exports.stringCalcDesliga = stringCalcDesliga;
-exports.singleOperators = singleOperators;
+module.exports = {
+  operations,
+  stringCalcLiga,
+  stringCalcDesliga,
+  singleOperators,
+};
