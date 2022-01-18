@@ -65,13 +65,13 @@ funcaoCadastro(
 const checarUsuarioExiste = async () => {
     console.log("Questionário para identificar se usuário já existe:\n");
     let infoUsuario = {};
-    for (const item of camposUsuario) {
+    for (const campo of camposUsuario) {
         await new Promise((resolve) =>
-            formInterface.question(`${item}: `, (input) =>
+            formInterface.question(`${campo}: `, (input) =>
                 resolve(
-                    item !== "idade"
-                        ? (infoUsuario[item] = input.toLowerCase())
-                        : (infoUsuario[item] = Number(input))
+                    campo !== "idade"
+                        ? (infoUsuario[campo] = input.toLowerCase())
+                        : (infoUsuario[campo] = Number(input))
                 )
             )
         );
