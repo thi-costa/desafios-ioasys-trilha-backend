@@ -77,7 +77,14 @@ const checarUsuarioExiste = async () => {
         );
     }
 
-    JSON.stringify(usuariosBD.get(0)) === JSON.stringify(infoUsuario)
+    let validation = false;
+    for(let value of usuariosBD.values()){
+        if(JSON.stringify(infoUsuario) === JSON.stringify(value)){
+            validation = true;
+        }
+    }
+    
+    validation   
         ? console.log("\nO usuário está cadastrado no BD.\n")
         : console.log("\nO usuário NÃO está cadastrado no BD.\n");
 
