@@ -20,6 +20,6 @@ apenas mostrar a organização das tabelas e seus relacionamentos</li>
     </p>
     <h2>Resolução</h2>
     <p>
-        A solução foi feita no site dbdiagram o qual usa DBML - Database Markup Language, para desenho dos diagramas. Segue abaixo o diagrama implementado, com o código-fonte em DBML à esquera e o diagrama à direita.
+        A solução foi feita no site dbdiagram o qual usa DBML - Database Markup Language, para desenho dos diagramas. Segue abaixo o <a href="https://dbdiagram.io/d/61ef4c307cf3fc0e7c6015d9">diagrama</a> implementado, com o código-fonte em DBML à esquera e o diagrama à direita.
     </p>
-    <iframe src="https://dbdiagram.io/d/61ef4c307cf3fc0e7c6015d9" title="W3Schools Free Online Web Tutorials" width="1280px" height="720px"></iframe>
+    <img src="https://user-images.githubusercontent.com/41833533/151008767-0abe4888-d528-4b98-ae3e-94d3d1b64c9f.png" title="DB-diagram"></img>
