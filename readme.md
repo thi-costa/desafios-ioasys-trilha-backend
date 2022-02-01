@@ -106,6 +106,25 @@ apenas mostrar a organização das tabelas e seus relacionamentos</li>
     <img src="https://user-images.githubusercontent.com/41833533/151008767-0abe4888-d528-4b98-ae3e-94d3d1b64c9f.png" title="DB-diagram"></img>
 </details>
 
+<details>
+    <summary>05 Injection SQL Attack</summary>
+    <ul>
+        <li> O código original, conforme imagens abaixo, permitia a possibilidade de inserir queries na url da requisição.</li>
+    </ul>
+    <img src="https://user-images.githubusercontent.com/41833533/152056192-95820537-07c9-4492-bf4b-f1a02f9fd403.png"/>
+    <img src="https://user-images.githubusercontent.com/41833533/152056106-8be7e9f6-527c-4f41-9456-95a6e4141d57.png"/>
+    <ul>
+        <li> Após a correção abaixo (inserção do '$1' para indicar que só se adiciona 1 elemento à query), a ORM passou a tratar a entrada da requisição, impedindo a utilização de queries indesejadas (como seleção de múltiplos usuários, ou até mesmo inserção e deleção de usuários).
+        </li>
+    </ul>
+    <img src="https://user-images.githubusercontent.com/41833533/152055635-dd4d0c21-8268-4731-82be-ba0b0e38af04.png">
+    <img src="https://user-images.githubusercontent.com/41833533/152055511-0992d60c-afc7-4421-9f9e-79b22cd404d3.png"/>
+</details>
+
+<details>
+    <summary>06 Timing attack</summary>
+</details>
+
 ## Referências
 
 https://diogommartins.wordpress.com/2016/08/22/como-se-defender-de-ifs-hadouken/
