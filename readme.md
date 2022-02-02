@@ -103,7 +103,7 @@ apenas mostrar a organização das tabelas e seus relacionamentos</li>
     <p>
         A solução foi feita no site dbdiagram o qual usa DBML - Database Markup Language, para desenho dos diagramas. Segue abaixo o <a href="https://dbdiagram.io/d/61ef4c307cf3fc0e7c6015d9">diagrama</a> implementado, com o código-fonte em DBML à esquerda e o diagrama à direita.
     </p>
-    <img src="https://user-images.githubusercontent.com/41833533/151008767-0abe4888-d528-4b98-ae3e-94d3d1b64c9f.png" title="DB-diagram"></img>
+    <img src="https://user-images.githubusercontent.com/41833533/152208872-7c5f354d-2758-44da-9907-c3809bd887cf.png" title="DB-diagram"></img>
 </details>
 
 <details>
