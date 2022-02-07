@@ -137,6 +137,62 @@ apenas mostrar a organização das tabelas e seus relacionamentos</li>
     <img alt="invalid user and invalid password" src="https://user-images.githubusercontent.com/41833533/152070326-2677c47f-3303-4433-a3a6-f62e0c15ff7b.png"/>
 </details>
 
+<details>
+    <summary>07 Nest API Deploy no Heroku</summary>
+
+<h2>Descrição</h2>
+
+Aplicação simples análoga a um CRUD para .
+
+## Instalação
+
+* Instalação de dependências
+
+```bash
+$ npm install
+```
+
+<h2>Docker</h2>
+
+* Lista de comandos para transforma repositório em container https://www.docker.com/products/docker-desktop
+
+```bash
+# Compor container
+$ docker-compose up
+
+# Build de projeto
+$ docker build -t foo
+```
+
+<h2>Heroku deploy</h2>
+
+* Lista de comandos para deploy em <a href=" https://devcenter.heroku.com/articles/getting-started-with-nodejs">Heroku</a>
+```bash
+# Login de usuário
+$ heroku login
+
+# Login em registro de containers
+$ heroku container:login
+
+# Enviar container para projeto heroku
+$ heroku container:push web -a NomeProjeto
+
+# Realizar deploy
+$ heroku container:release web -a NomeProjeto
+
+# Abrir projeto no navegador
+$ heroku open -a NomeProjeto
+```
+<h2>Projeto</h2>
+
+* Segue o link do deploy do projeto: <a href="https://nestcampapi.herokuapp.com/">https://nestcampapi.herokuapp.com/</a>
+
+
+## License
+
+Nest is [MIT licensed](LICENSE).
+</details>
+
 ## Referências
 
 https://diogommartins.wordpress.com/2016/08/22/como-se-defender-de-ifs-hadouken/
